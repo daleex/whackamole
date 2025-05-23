@@ -67,7 +67,7 @@ function click(lol) {
   a=lol.target.style.background;
   if (a==img&&sec!=0) {
     lol.target.style.background="";
-    lol.target.style.background="url('../img/whit.png') no-repeat center center";
+    lol.target.style.background="url('img/whit.png') no-repeat center center";
     lol.target.style.backgroundSize="25vw 15vw";
     if (lol.target.style.background!="url('whit.png')") {
       cont++;
