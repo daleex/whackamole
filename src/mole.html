@@ -13,10 +13,10 @@
         </h1>
       </div>
       <div class="left">
-        <div id="tab" onmousedown="rotate()" onmouseup="rotate1()">
+        <div id="tab" onmousedown="rotate()">
           <table>
             <tr>
-              <td style="background:url('wtal.png') no-repeat center center; background-size: 11vw 9vw;"></td>
+              <td style="background:url('../img/wtal.png') no-repeat center center; background-size: 11vw 9vw;"></td>
               <td></td>
               <td></td>
             </tr>
@@ -39,14 +39,15 @@
         <input type="text" value="0" readonly id="nc"><br><br>
         Difficoltà: <select id="sel">
           <option value="prin">Principiante</option>
-          <option value="fac">Facile</option>
-          <option value="med">Medio</option>
+          <option selected value="med">Medio</option>
           <option value="diff">Difficile</option>
+          <option value="hell">Hell</option>
         </select>
         <br><br><br><br>
         <input type="button" onclick="start()" class="but" id="myButton1" value="START">
       </div>
     </div>
-    <p id="credit"><span class="bold">Developer :</span> Dali Lala - 2018&copy; </p>
+    <div id="hammer"></div>
+    <p id="credit"><span class="bold">Developer :</span> Daleex &copy; </p>
   </body>
 </html>
