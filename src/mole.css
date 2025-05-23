@@ -12,7 +12,7 @@ td{
   margin:0px;
   width:12vw;
   height:12vw;
-  background: url("https://adhityabee.files.wordpress.com/2014/12/hole.png") center no-repeat;
+  background: url("../img/hole.png") center no-repeat;
   background-size: 11vw 9vw;
 }
 body{
@@ -89,7 +89,7 @@ margin: 0px;
   position: absolute;
   width: 6vw;
   height: 6vw;
-  background: url('hammer.cur') no-repeat center center;
+  background: url('../img/hammer.cur') no-repeat center center;
   background-size: contain;
   pointer-events: none;
   transition: transform 0.1s ease;
