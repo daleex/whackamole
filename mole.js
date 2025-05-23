@@ -3,20 +3,23 @@ function start() {
   var elem = document.getElementById("myButton1");
     if (elem.value=="START") elem.value = "RESTART";
     else elem.value = "START";
+
+  document.getElementById('hammer').style.display = 'block';
+  document.body.style.cursor = 'none';
   if (ss==60){
     cont=0;
    
     opt=document.getElementById('sel').value;
     if (opt=="prin") {
-      opt=1000;
-    }
-    if (opt=="fac") {
       opt=800;
     }
     if (opt=="med") {
       opt=600;
     }
     if (opt=="diff") {
+      opt=500;
+    }
+    if (opt=="hell") {
       opt=400;
     }
     var y = document.getElementById("tab");
@@ -66,18 +69,46 @@ function click(lol) {
     lol.target.style.background="";
     lol.target.style.background="url('whit.png') no-repeat center center";
     lol.target.style.backgroundSize="25vw 15vw";
-    cont++;
+    if (lol.target.style.background!="url('whit.png')") {
+      cont++;
+    } 
   }
   document.getElementById('nc').value=cont;
 }
-function rotate() {
-  hammer=document.getElementById("tab").style.cursor="url('hammer1.cur'), auto";
-}
-function rotate1() {
-  hammer=document.getElementById("tab").style.cursor="url('hammer.cur'), auto";
-}
+
 function caso(min, max) {
 max = Number(max);
 min = Number(min);
 return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.addEventListener('mousemove', function(e) {
+  const hammer = document.getElementById('hammer');
+
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  
+  const hammerWidth = hammer.offsetWidth;
+  const hammerHeight = hammer.offsetHeight;
+  
+  let left = e.pageX - hammerWidth / 2;
+  let top = e.pageY - hammerHeight / 2;
+
+  if (left < 0) left = 0;
+  else if (left + hammerWidth > vw) left = vw - hammerWidth;
+
+  if (top < 0) top = 0;
+  else if (top + hammerHeight > vh) top = vh - hammerHeight;
+  
+  hammer.style.left = left + 'px';
+  hammer.style.top = top + 'px';
+});
+
+
+function rotate() {
+  const hammer = document.getElementById('hammer');
+  hammer.classList.add('hit');
+  setTimeout(() => {
+    hammer.classList.remove('hit');
+  }, 100);
 }

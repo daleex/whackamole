@@ -35,7 +35,6 @@ body{
 }
 #tab{
   display: inline-block;
-  cursor: url(hammer.cur), auto;
 }
 .right{
   float: left;
@@ -85,17 +84,18 @@ margin: 0px;
   margin:0;
 }
 
-.ruota
-{
-animation-name: animazione;
-animation-duration: 2s;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
+#hammer {
+  display: none;
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  background: url('hammer.cur') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  z-index: 9999;
 }
-@keyframes animazione{
-  0%{transform: rotate(0deg);}
-  25%{transform: rotate(90deg);}
-  50%{transform: rotate(180deg);}
-  75%{transform: rotate(270deg);}
-  100%{transform: rotate(360deg);}
+
+#hammer.hit {
+  transform: rotate(-90deg) translateY(1vw);
 }
