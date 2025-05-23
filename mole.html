@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mole Hunter</title>
+    <link rel="stylesheet" href="mole.css">
+    <script src="mole.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <h1>
+        </h1>
+      </div>
+      <div class="left">
+        <div id="tab" onmousedown="rotate()" onmouseup="rotate1()">
+          <table>
+            <tr>
+              <td style="background:url('wtal.png') no-repeat center center; background-size: 11vw 9vw;"></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="right">
+        Tempo Rimasto:<br><input type="text" value="60" readonly id="tempo"><br><br>
+        Talpe Colpite:<br>
+        <input type="text" value="0" readonly id="nc"><br><br>
+        Difficoltà: <select id="sel">
+          <option value="prin">Principiante</option>
+          <option value="fac">Facile</option>
+          <option value="med">Medio</option>
+          <option value="diff">Difficile</option>
+        </select>
+        <br><br><br><br>
+        <input type="button" onclick="start()" class="but" id="myButton1" value="START">
+      </div>
+    </div>
+    <p id="credit"><span class="bold">Developer :</span> Dali Lala - 2018&copy; </p>
+  </body>
+</html>
