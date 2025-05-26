@@ -1,7 +1,7 @@
 var pos,x=0,img,tm,pp,opt,ss=60;
 function start() {
   var elem = document.getElementById("myButton1");
-    if (elem.value=="START") elem.value = "RESTART";
+    if (elem.value=="START") elem.value = "STOP";
     else elem.value = "START";
 
   document.getElementById('hammer').style.display = 'block';
